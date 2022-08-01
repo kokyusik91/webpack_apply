@@ -1,0 +1,19 @@
+.title {
+  display: inline-block;
+  color : green;
+  
+  &.is-active {
+    animation: imageRotate .02s ease-in-out infinite alternate;
+
+  }
+}
+
+@keyframes imageRotate {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

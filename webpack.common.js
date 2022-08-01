@@ -6,9 +6,14 @@ module.exports = {
     app: '/index.ts',
   },
   plugins: [
+    // build 과정에 html을 대입
     new HtmlWebpackPlugin({
       title: 'Production',
+      // template 경로를 써주면 된다. 
       template: 'index.html',
+      templateParameters : {
+      kyusikko : process.env.NODE_ENV === 'development' ? '(개발용)' : ''
+    }
     }),
   ],
   output: {
@@ -43,6 +48,15 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
+      //   type: 'asset',
+      //   parser: {
+      //     dataUrlCondition: {
+      //       maxSize: 40 * 1024, // 기준으로 4kb 로 변경
+      //     },
+      //   },
+      // },
     ]
   },
   resolve: {

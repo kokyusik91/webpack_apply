@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts": "tsc --build",
-    "dev": "webpack serve --open --progress",
-    "build": "webpack"
+    "dev": "webpack serve --open --progress --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

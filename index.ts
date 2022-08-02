@@ -1,7 +1,4 @@
-import './styles/start.scss';
-import './assets/images/chick.jpeg';
-import './assets/images/nyncat.png';
-import './assets/images/sad-frog.png';
+import './style';
 
 import {sum} from './src/func';
 import {domInit} from './src/loaded'

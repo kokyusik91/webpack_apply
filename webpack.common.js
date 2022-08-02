@@ -37,10 +37,9 @@ module.exports = {
         test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 2000, //2kb 미만 파일만 data url로 처리
-              outputPath: './assets/images', 
+              outputPath: '/assets/images', 
               name: '[name].[ext]?[hash]',
               // fallback: 'file-loader',
               // publicPath : './build',
@@ -48,15 +47,11 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
-      //   type: 'asset',
-      //   parser: {
-      //     dataUrlCondition: {
-      //       maxSize: 40 * 1024, // 기준으로 4kb 로 변경
-      //     },
-      //   },
-      // },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        type: 'asset/resource',
+        dependency: { not: ['url'] },
+      }
     ]
   },
   resolve: {

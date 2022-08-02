@@ -1,4 +1,10 @@
+@import './base/fonts.scss';
+@import './layouts/icon.scss';
 @import './base/color.scss';
 @import './layouts/contents.scss';
 @import './layouts/title.scss';
 @import './components/container.scss';
+
+i {
+  font-size: 300px;
+}

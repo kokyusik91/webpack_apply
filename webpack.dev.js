@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const  webpack  = require('webpack');
 
-
+// 개발서버
 
 module.exports = merge(common, {
   mode: 'development',
